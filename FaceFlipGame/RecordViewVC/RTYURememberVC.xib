@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RTYURememberVC" customModule="FaceFlipGame" customModuleProvider="target">
+            <connections>
+                <outlet property="btnViewHeight" destination="AGG-O4-Cb5" id="q8k-6e-8yc"/>
+                <outlet property="rtyuGammBtn" destination="BAm-38-bTM" id="qbW-PB-kMf"/>
+                <outlet property="rtyuRememberTable" destination="y1L-zI-vQb" id="OeL-2i-0pW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-NS-vdz">
+                    <rect key="frame" x="0.0" y="92" width="414" height="559"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remember" translatesAutoresizingMaskIntoConstraints="NO" id="2Zn-oy-TJN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="纪录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzI-GR-Ayz">
+                    <rect key="frame" x="171.66666666666666" y="50" width="70.666666666666657" height="42"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y1L-zI-vQb">
+                    <rect key="frame" x="30" y="107" width="354" height="519"/>
+                    <color key="backgroundColor" white="0.64576496979961662" alpha="0.051530393835616438" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="F0o-dX-vUf"/>
+                        <outlet property="delegate" destination="-1" id="Efj-fF-BXx"/>
+                    </connections>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NLu-5K-rzQ">
+                    <rect key="frame" x="62" y="651" width="290" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAm-38-bTM">
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
+                            <state key="normal" image="card_bt04">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="rtyuReplayClick:" destination="-1" eventType="touchUpInside" id="xO2-eI-RG1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-Jn-HUA">
+                            <rect key="frame" x="150" y="0.0" width="140" height="60"/>
+                            <state key="normal" image="card_bt03">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="rtyuToBackClick:" destination="-1" eventType="touchUpInside" id="mYI-BE-Owv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="AGG-O4-Cb5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Ij-NS-vdz" secondAttribute="trailing" id="7hV-iF-rVU"/>
+                <constraint firstItem="9Ij-NS-vdz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ecb-VH-dEm"/>
+                <constraint firstItem="9Ij-NS-vdz" firstAttribute="top" secondItem="YzI-GR-Ayz" secondAttribute="bottom" id="IQe-ZO-vrh"/>
+                <constraint firstItem="2Zn-oy-TJN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="StX-fL-foi"/>
+                <constraint firstItem="NLu-5K-rzQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.3" id="TVS-oi-otd"/>
+                <constraint firstItem="YzI-GR-Ayz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UBO-M5-QO8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y1L-zI-vQb" secondAttribute="trailing" constant="30" id="YBI-gv-blz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NLu-5K-rzQ" secondAttribute="bottom" constant="25" id="YCL-97-NhP"/>
+                <constraint firstAttribute="bottom" secondItem="2Zn-oy-TJN" secondAttribute="bottom" id="ZPI-bn-znm"/>
+                <constraint firstItem="2Zn-oy-TJN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZVs-Lw-JLS"/>
+                <constraint firstItem="y1L-zI-vQb" firstAttribute="top" secondItem="YzI-GR-Ayz" secondAttribute="bottom" constant="15" id="aw5-GF-uz7"/>
+                <constraint firstItem="NLu-5K-rzQ" firstAttribute="top" secondItem="9Ij-NS-vdz" secondAttribute="bottom" id="awH-lu-Ucg"/>
+                <constraint firstItem="NLu-5K-rzQ" firstAttribute="top" secondItem="y1L-zI-vQb" secondAttribute="bottom" constant="25" id="hhj-A7-1Hv"/>
+                <constraint firstItem="NLu-5K-rzQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nW6-E5-cXR"/>
+                <constraint firstItem="YzI-GR-Ayz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="npF-wz-ADU"/>
+                <constraint firstItem="y1L-zI-vQb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="o6r-Tr-7TA"/>
+                <constraint firstAttribute="trailing" secondItem="2Zn-oy-TJN" secondAttribute="trailing" id="w1W-Ce-VN2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="card_bt03" width="702" height="279"/>
+        <image name="card_bt04" width="702" height="279"/>
+        <image name="remember" width="1097" height="1682"/>
+    </resources>
+</document>

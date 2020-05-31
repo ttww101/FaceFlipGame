@@ -1,0 +1,6 @@
+framework module Pods_FaceFlipGame {
+  umbrella header "Pods-FaceFlipGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

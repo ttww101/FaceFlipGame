@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceFlipGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55W-sE-ITk">
+                                <rect key="frame" x="0.0" y="20" width="414" height="455.33333333333331"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-cg-8Ye">
+                                <rect key="frame" x="0.0" y="20" width="414" height="455.33333333333331"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage" translatesAutoresizingMaskIntoConstraints="NO" id="bzf-Nl-chZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-qn-RQH">
+                                <rect key="frame" x="107" y="475.33333333333326" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OaU-zk-ccs"/>
+                                    <constraint firstAttribute="height" constant="80" id="euF-zc-SfY"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="card_bt01"/>
+                                <connections>
+                                    <action selector="rtyuBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5V-dm-98Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbu-9J-E3U">
+                                <rect key="frame" x="107" y="560.33333333333337" width="200" height="80"/>
+                                <state key="normal" backgroundImage="card_bt02"/>
+                                <connections>
+                                    <action selector="rtyuRecordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ER9-cd-0yh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="qw2-9Z-Soo">
+                                <rect key="frame" x="2" y="50" width="410" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qw2-9Z-Soo" secondAttribute="height" multiplier="1:1" id="hlm-kU-Qn8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qw2-9Z-Soo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="39m-6t-9ae"/>
+                            <constraint firstItem="fbu-9J-E3U" firstAttribute="top" secondItem="Wl8-qn-RQH" secondAttribute="bottom" constant="5" id="9lB-fe-mF7"/>
+                            <constraint firstItem="qw2-9Z-Soo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BEX-W2-yzP"/>
+                            <constraint firstItem="Wl8-qn-RQH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.4" id="D4Y-ha-NDm"/>
+                            <constraint firstItem="55W-sE-ITk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GWc-4I-vMQ"/>
+                            <constraint firstItem="NHz-cg-8Ye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HLy-tS-ptz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bzf-Nl-chZ" secondAttribute="trailing" id="JR6-Bq-ZZU"/>
+                            <constraint firstAttribute="bottom" secondItem="bzf-Nl-chZ" secondAttribute="bottom" id="LeU-CW-AiH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="55W-sE-ITk" secondAttribute="trailing" id="Oqa-c5-gJE"/>
+                            <constraint firstItem="fbu-9J-E3U" firstAttribute="width" secondItem="Wl8-qn-RQH" secondAttribute="width" id="VLO-8P-kt5"/>
+                            <constraint firstItem="55W-sE-ITk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZRh-CD-4rv"/>
+                            <constraint firstItem="qw2-9Z-Soo" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.25" id="aG6-Bc-dLY"/>
+                            <constraint firstItem="fbu-9J-E3U" firstAttribute="height" secondItem="Wl8-qn-RQH" secondAttribute="height" id="edr-Qp-cau"/>
+                            <constraint firstItem="NHz-cg-8Ye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gEe-E8-k2y"/>
+                            <constraint firstItem="bzf-Nl-chZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ge5-3y-Ntd"/>
+                            <constraint firstItem="fbu-9J-E3U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lMJ-CZ-ltn"/>
+                            <constraint firstItem="Wl8-qn-RQH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkR-Ne-DOX"/>
+                            <constraint firstItem="bzf-Nl-chZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sML-Mf-zj6"/>
+                            <constraint firstItem="Wl8-qn-RQH" firstAttribute="top" secondItem="NHz-cg-8Ye" secondAttribute="bottom" id="sUY-VQ-JG8"/>
+                            <constraint firstItem="Wl8-qn-RQH" firstAttribute="top" secondItem="55W-sE-ITk" secondAttribute="bottom" id="x9p-Hb-dYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHz-cg-8Ye" secondAttribute="trailing" id="xMg-d0-112"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bgimage" width="1242" height="2264"/>
+        <image name="card_bt01" width="702" height="279"/>
+        <image name="card_bt02" width="702" height="279"/>
+        <image name="girl" width="1138" height="1400"/>
+    </resources>
+</document>
